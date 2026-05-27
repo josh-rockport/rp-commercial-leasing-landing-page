@@ -18,7 +18,7 @@ const BuildingGrid = () => {
       .catch(() => setError(true));
   }, []);
 
-  const handleScheduleTour = (buildingName: string) => {
+  const handleScheduleTour = (_buildingName: string) => {
     const formElement = document.getElementById('contact-form');
     if (formElement) {
       formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
