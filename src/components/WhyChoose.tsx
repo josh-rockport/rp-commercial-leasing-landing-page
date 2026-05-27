@@ -49,7 +49,11 @@ const WhyChoose = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img src="/images/industrial-park.jpg" alt="Matheson Industrial Park" />
+            <img
+              src="/images/industrial-park.jpg"
+              alt="Matheson Industrial Park"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+            />
           </motion.div>
           
           <motion.div 
