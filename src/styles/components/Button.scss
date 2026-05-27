@@ -1,0 +1,48 @@
+@import '../variables.scss';
+
+.btn {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all $transition-normal;
+  cursor: pointer;
+  border: none;
+  font-family: $font-body;
+  
+  &--primary {
+    background-color: $color-primary-red;
+    color: $color-white;
+    
+    &:hover:not(:disabled) {
+      background-color: $color-dark-red;
+      box-shadow: 0 4px 12px rgba($color-primary-red, 0.4);
+    }
+  }
+  
+  &--secondary {
+    background-color: transparent;
+    color: $color-primary-red;
+    border: 2px solid $color-primary-red;
+    
+    &:hover:not(:disabled) {
+      background-color: $color-primary-red;
+      color: $color-white;
+    }
+  }
+  
+  &--full-width {
+    width: 100%;
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0.875rem 2rem;
+    font-size: 0.9rem;
+  }
+}

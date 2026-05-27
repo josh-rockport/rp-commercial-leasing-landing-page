@@ -1,0 +1,92 @@
+[
+  {
+    "id": "building-1",
+    "name": "2 Matheson Parkway",
+    "image": "/images/2Matheson.png",
+    "price": "$15.00",
+    "size": "2,166 SQ FT",
+    "features": [
+      "Finished office and reception spaces",
+      "12×14 at-grade overhead door",
+      "3 phase power",
+      "Mezzanine level",
+      "In-unit washroom"
+    ],
+    "status": "AVAILABLE",
+    "statusColor": "#E5383B"
+  },
+  {
+    "id": "building-2",
+    "name": "38 Don Valley Pkwy",
+    "image": "/images/38DonValley.png",
+    "price": "$12.50",
+    "size": "1,400 SQ FT",
+    "features": [
+      "Dock & Grade loading",
+      "Spacious shop/warehouse area",
+      "In unit washroom",
+      "12'×14' at grade overhead door"
+    ],
+    "status": "AVAILABLE",
+    "statusColor": "#E5383B"
+  },
+  {
+    "id": "building-3",
+    "name": "54 Don Valley Pkwy",
+    "image": "/images/54DonValley.png",
+    "price": "$14.75",
+    "size": "4,523 SQ FT",
+    "features": [
+      "Finished offices, reception and conference room",
+      "Three 12'×14' at grade overhead doors",
+      "Mezzanine level for added storage/office",
+      "Ample on-site parking for staff & clients"
+    ],
+    "status": "AVAILABLE",
+    "statusColor": "#E5383B"
+  },
+  {
+    "id": "building-4",
+    "name": "6 Matheson Parkway",
+    "image": "/images/6Matheson.png",
+    "price": "$15.00",
+    "size": "3,032 SQ FT",
+    "features": [
+      "Newly constructed",
+      "12'×14' at grade overhead door",
+      "Mezzanine level for added storage/office",
+      "In-floor draining for easy clean-up"
+    ],
+    "status": "AVAILABLE",
+    "statusColor": "#E5383B"
+  },
+  {
+    "id": "building-5",
+    "name": "885 Redonda",
+    "image": "/images/885Redonda.png",
+    "price": "$13.95",
+    "size": "1,750 SQ FT",
+    "features": [
+      "Open warehouse space",
+      "12'×14' at grade overhead door",
+      "In unit washroom"
+    ],
+    "status": "AVAILABLE",
+    "statusColor": "#E5383B"
+  },
+  {
+    "id": "building-6",
+    "name": "883 Redonda",
+    "image": "/images/893Redonda.png",
+    "price": "$13.95",
+    "size": "5,846 SQ FT",
+    "features": [
+      "8 private offices",
+      "3 washrooms for staff and clients",
+      "2 12'×14' at grade overhead doors",
+      "Yard space available"
+    ],
+    "status": "AVAILABLE",
+    "statusColor": "#E5383B"
+  }
+]

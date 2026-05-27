@@ -1,0 +1,59 @@
+@import '../variables.scss';
+
+.final-cta {
+  background-color: $color-carbon-black;
+  padding: $spacing-xxl 0;
+  
+  &__content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  &__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: $color-white;
+    margin-bottom: $spacing-sm;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.02em;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #e5383b, #ba181b);
+      margin: 0.75rem auto 1.5rem;
+      transform-origin: left;
+      box-shadow: 0 0 10px rgba(229, 56, 59, .5);
+    }
+  }
+  
+  &__subtitle {
+    font-size: 0.95rem;
+    color: rgba($color-white, 0.9);
+    margin-bottom: $spacing-xl;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  &__button {
+    padding: 1rem 3rem;
+    background-color: $color-primary-red;
+    color: $color-white;
+    border: none;
+    font-family: $font-headline;
+    font-size: 1.125rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all $transition-fast;
+    
+    &:hover {
+      background-color: darken($color-primary-red, 10%);
+      transform: translateY(-2px);
+    }
+  }
+}
