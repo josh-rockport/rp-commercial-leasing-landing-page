@@ -22,6 +22,14 @@ const BuildingGrid = () => {
     const formElement = document.getElementById('contact-form');
     if (formElement) {
       formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => {
+        formElement.classList.add('hero__form--highlighted');
+        formElement.addEventListener(
+          'animationend',
+          () => formElement.classList.remove('hero__form--highlighted'),
+          { once: true }
+        );
+      }, 700);
     }
   };
 

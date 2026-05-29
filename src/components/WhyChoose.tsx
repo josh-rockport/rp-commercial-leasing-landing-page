@@ -41,28 +41,10 @@ const WhyChoose = () => {
   return (
     <section className="why-choose section">
       <div className="container">
-        <div className="why-choose__content">
-          <motion.div 
-            className="why-choose__image"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <img
-              src="/images/industrial-park.jpg"
-              alt="Matheson Industrial Park"
-              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-            />
-          </motion.div>
-          
-          <motion.div 
-            className="why-choose__text"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+        <div className="why-choose__grid">
+
+          {/* Top left: heading + description */}
+          <div className="why-choose__cell why-choose__cell--text">
             <span className="why-choose__badge">Prime Location</span>
             <h2 className="why-choose__title">
               WHY CHOOSE MATHESON INDUSTRIAL PARK?
@@ -70,7 +52,46 @@ const WhyChoose = () => {
             <p className="why-choose__description">
               More than just space, it's designed to maximize operational efficiency and elevate your brand
             </p>
-            
+          </div>
+
+          {/* Top right: aerial image 2 */}
+          <motion.div
+            className="why-choose__image"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <img
+              src="/images/park-arial-2.png"
+              alt="Matheson Industrial Park"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+            />
+          </motion.div>
+
+          {/* Bottom left: aerial image 1 */}
+          <motion.div
+            className="why-choose__image"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <img
+              src="/images/park-arial.JPG"
+              alt="Matheson Industrial Park"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+            />
+          </motion.div>
+
+          {/* Bottom right: benefits list */}
+          <motion.div
+            className="why-choose__cell why-choose__text"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             <div className="why-choose__benefits">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -87,6 +108,7 @@ const WhyChoose = () => {
               ))}
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>
