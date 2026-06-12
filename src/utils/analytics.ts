@@ -5,35 +5,6 @@ declare global {
   }
 }
 
-export const initializeAnalytics = () => {
-  const GA4_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID;
-  const ADS_CONVERSION_ID = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_ID;
-
-  if (!GA4_ID) {
-    console.warn('GA4 Measurement ID not found. Analytics will not be tracked.');
-    return;
-  }
-
-  // Extract base AW-XXXXXXXXX from the full "AW-XXXXXXXXX/LABEL" send_to string
-  const adsBaseId = ADS_CONVERSION_ID ? ADS_CONVERSION_ID.split('/')[0] : null;
-
-  const script1 = document.createElement('script');
-  script1.async = true;
-  script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
-  document.head.appendChild(script1);
-
-  const adsConfig = adsBaseId ? `gtag('config', '${adsBaseId}');` : '';
-
-  const script2 = document.createElement('script');
-  script2.textContent = `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${GA4_ID}');
-    ${adsConfig}
-  `;
-  document.head.appendChild(script2);
-};
 
 export const trackEvent = (eventName: string, eventParams?: Record<string, any>) => {
   if (typeof window.gtag === 'function') {
