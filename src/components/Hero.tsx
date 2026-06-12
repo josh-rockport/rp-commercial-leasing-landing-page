@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { getHeadlineFromURL, getSubheadlineFromURL } from '../utils/dynamicText';
 import { submitForm, FormData } from '../utils/formSubmit';
-import { trackFormSubmission } from '../utils/analytics';
+import { trackFormSubmission, trackGoogleAdsConversion } from '../utils/analytics';
 import '../styles/components/Hero.scss';
 
 const Hero = () => {
@@ -40,6 +40,7 @@ const Hero = () => {
         phone: formData.phone,
         company: formData.company
       });
+      trackGoogleAdsConversion();
       setSubmitStatus({ type: 'success', message: result.message });
       setFormData({ name: '', email: '', phone: '', company: '', message: '' });
     } else {
