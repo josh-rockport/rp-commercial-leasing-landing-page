@@ -27,19 +27,6 @@ export const trackFormSubmission = (formData: {
   });
 };
 
-export const trackGoogleAdsConversion = () => {
-  const sendTo = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_ID;
-  if (!sendTo) {
-    console.warn('Google Ads conversion ID not configured.');
-    return;
-  }
-  if (typeof window.gtag === 'function') {
-    window.gtag('event', 'conversion', {
-      send_to: sendTo,
-    });
-  }
-};
-
 export const trackBuildingCardClick = (buildingName: string) => {
   trackEvent('building_card_click', {
     event_category: 'engagement',
